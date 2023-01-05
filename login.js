@@ -14,7 +14,7 @@ const app = {
       axios.post(`${this.baseUrl}/admin/signin`, this.userData)
       .then(res => {
         const { token, expired } = res.data;
-        document.cookie = `wrightyuToken=${token};expires=${new Date(expired)}; path=/`;
+        document.cookie = `wrightyuToken=${token};expires=${new Date(expired)};`;
         alert("登入成功");
         window.location.assign("./products.html");
       })

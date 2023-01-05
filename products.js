@@ -29,7 +29,7 @@ const app = {
     },
   },
   mounted() {
-    const token = document.cookie.replace(/(?:(?:^|.*;\s*)wrightyuToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)wrightyuToken\s*=\s*([^;]*).*$)|^.*$/, "$1");
     axios.defaults.headers.common.Authorization = token;
     this.checkAdmin();
   },
